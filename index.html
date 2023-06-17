@@ -27,17 +27,26 @@
       height: 42px;
 
     }
+
     .input-group {
       display: flex;
       justify-content: center;
       align-items: center;
       margin-top: 20px;
     }
-    .list{
-      background-color: aqua;
+
+    .list {
       font-size: 20px;
     }
+    .trash{
+      display: flex;
+      /* flex-direction: column; */
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 15px;
+    }
   </style>
+
 </head>
 
 
@@ -47,12 +56,27 @@
     <div class="input-group ">
       <input type="text" class="style1" placeholder="Enter kitchen items here" id="kitchen-input">
       <button type="button" class=" text-white "
-        style="background-color: black;border-radius: 0%;padding: 0 20px; height: 42px;" id="btn">Add now</button>
+        style="background-color: black;border: none; border-radius: 0%;padding: 0 20px; height: 42px;" id="btn">Add now</button>
     </div>
     <div class="input-group">
-      <ul id="list" class=" list" style="text-decoration: none; list-style-type: none;width: 300px;background-color:rgb(34, 211, 122);"></ul>
+      <ul id="list" class=" list w-50 p-5 "
+        style=" list-style-type: none;"></ul>
     </div>
   </div>
+
+  
+  <!-- <div style="display: flex; align-items: center;justify-content: center;      margin-top: 20px;  ">
+    <input type="text" id="id1" class="form-control w-25 mt-3 p-2" placeholder="Enter"
+      style="border-radius: 0%;height: 42px;">
+    <button type="button" id="id2" class="text-white btn btn-info mt-2 p-2"
+      style="width: 100px;border:1px solid black ; border-radius: 0%;background-color: black;height: 42px;"> Click
+      me</button>
+  </div>
+  <div style=" display: flex; justify-content: center;">
+    <ul id="id3" class=" p-4 fs-5 text-center w-25 text-white" style="list-style:none;">
+    </ul>
+  </div> -->
 </body>
 <script src="./main.js"></script>
+
 </html>
