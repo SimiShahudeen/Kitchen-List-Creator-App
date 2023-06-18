@@ -9,6 +9,7 @@ function addItem() {
   let listCreate = document.createElement("li");
   listCreate.style.marginBottom = '10px';
   listCreate.style.backgroundColor = 'aqua';
+  listCreate.classList.add('slideIn');
   listCreate.classList.add('trash')
   listCreate.innerText = itemEnter;
   kitchenList.appendChild(listCreate);
@@ -25,12 +26,20 @@ function addItem() {
   // trashButton.addEventListener('click',deleteItem);
 
 }
-const deleteItem=()=>{
-alert('delete')
+const deleteItem = (event) => {
+  // console.log(event)
+  console.log(event.target.classList[1])
+  if (event.target.classList[1] === "fa-trash") {
+    let item = event.target.parentElement;
+    item.classList.add('slideOut');
+    item.addEventListener('transitionend', function(){
+    item.remove();
+    })
+  }
 }
 
 addButton.addEventListener("click", addItem);
-kitchenList.addEventListener('click',deleteItem);
+kitchenList.addEventListener('click', deleteItem);
 
 
 

@@ -28,6 +28,26 @@
 
     }
 
+    /* animation in */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: rotateX(60deg) translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: rotateX(0deg) translateY(0px);
+      }
+    }
+
+    /* animation out */
+    .slideOut{
+      transform: rotateX(60deg) translateY(-10px);
+      opacity: 0;
+      transition: 1s;
+    }
+
     .input-group {
       display: flex;
       justify-content: center;
@@ -38,7 +58,8 @@
     .list {
       font-size: 20px;
     }
-    .trash{
+
+    .trash {
       display: flex;
       /* flex-direction: column; */
       align-items: center;
@@ -56,15 +77,15 @@
     <div class="input-group ">
       <input type="text" class="style1" placeholder="Enter kitchen items here" id="kitchen-input">
       <button type="button" class=" text-white "
-        style="background-color: black;border: none; border-radius: 0%;padding: 0 20px; height: 42px;" id="btn">Add now</button>
+        style="background-color: black;border: none; border-radius: 0%;padding: 0 20px; height: 42px;" id="btn">Add
+        now</button>
     </div>
     <div class="input-group">
-      <ul id="list" class=" list w-50 p-5 "
-        style=" list-style-type: none;"></ul>
+      <ul id="list" class=" list w-50 p-5 " style=" list-style-type: none;"></ul>
     </div>
   </div>
 
-  
+
   <!-- <div style="display: flex; align-items: center;justify-content: center;      margin-top: 20px;  ">
     <input type="text" id="id1" class="form-control w-25 mt-3 p-2" placeholder="Enter"
       style="border-radius: 0%;height: 42px;">
